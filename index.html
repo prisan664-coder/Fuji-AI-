@@ -145,6 +145,9 @@
 
         <!-- Chat Stream -->
         <div id="chat-box" class="flex-1 overflow-y-auto p-3 sm:p-5 space-y-3 sm:space-y-4">
+            <!-- ★ โลโก้กลางห้องแชท -->
+            <img src="img/1.jpeg" alt="Fuji Logo" class="chat-hero-logo">
+
             <div class="flex items-start space-x-2 sm:space-x-3 msg-animate">
                 <div
                     class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-br from-cyan-500 to-indigo-600 flex items-center justify-center text-white text-xs font-bold shadow-md shadow-cyan-500/20 shrink-0 mt-1">
@@ -168,43 +171,43 @@
                     <span class="text-[10px] text-slate-500 block text-right mt-1" id="welcome-time"></span>
                 </div>
             </div>
-        </div>
+    </div>
 
-        <!-- Scroll to Bottom -->
-        <button id="scroll-bottom-btn" onclick="scrollToBottom(true)" aria-label="ໄປລຸ່ມສຸດ"
-            class="hidden-btn absolute bottom-28 right-4 sm:right-6 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-cyan-500 hover:bg-cyan-400 text-white shadow-lg shadow-cyan-500/40 z-10 flex items-center justify-center">
-            <i class="fa-solid fa-arrow-down text-sm"></i>
-        </button>
+    <!-- Scroll to Bottom -->
+    <button id="scroll-bottom-btn" onclick="scrollToBottom(true)" aria-label="ໄປລຸ່ມສຸດ"
+        class="hidden-btn absolute bottom-28 right-4 sm:right-6 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-cyan-500 hover:bg-cyan-400 text-white shadow-lg shadow-cyan-500/40 z-10 flex items-center justify-center">
+        <i class="fa-solid fa-arrow-down text-sm"></i>
+    </button>
 
-        <!-- Input Form -->
-        <div class="p-2 sm:p-4 glass-header shrink-0">
-            <form id="chat-form" onsubmit="handleUserInputSubmit(event)" class="flex items-center gap-1.5 sm:gap-2">
-                <button type="button" onclick="toggleVoiceInput()" id="voice-btn" aria-label="ພູດ"
-                    class="p-2.5 sm:p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-400 hover:text-pink-400 transition border border-slate-700/60 active:scale-95 shrink-0">
-                    <i class="fa-solid fa-microphone text-sm"></i>
-                </button>
-                <button type="button" onclick="openPhotoSheet()" aria-label="ສົ່ງຮູບ"
-                    class="p-2.5 sm:p-3 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 hover:from-emerald-500/30 hover:to-teal-500/30 text-emerald-400 border border-emerald-500/40 transition active:scale-95 shrink-0">
-                    <i class="fa-solid fa-camera text-sm"></i>
-                </button>
+    <!-- Input Form -->
+    <div class="p-2 sm:p-4 glass-header shrink-0">
+        <form id="chat-form" onsubmit="handleUserInputSubmit(event)" class="flex items-center gap-1.5 sm:gap-2">
+            <button type="button" onclick="toggleVoiceInput()" id="voice-btn" aria-label="ພູດ"
+                class="p-2.5 sm:p-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-400 hover:text-pink-400 transition border border-slate-700/60 active:scale-95 shrink-0">
+                <i class="fa-solid fa-microphone text-sm"></i>
+            </button>
+            <button type="button" onclick="openPhotoSheet()" aria-label="ສົ່ງຮູບ"
+                class="p-2.5 sm:p-3 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 hover:from-emerald-500/30 hover:to-teal-500/30 text-emerald-400 border border-emerald-500/40 transition active:scale-95 shrink-0">
+                <i class="fa-solid fa-camera text-sm"></i>
+            </button>
 
-                <div class="relative flex-1">
-                    <input type="text" id="user-input" placeholder="ພິມຄຳຖາມ ຫຼື ຂໍ້ຄວາມ..." autocomplete="off"
-                        maxlength="500" enterkeyhint="send"
-                        class="w-full bg-slate-950/90 text-slate-100 placeholder-slate-500 text-xs sm:text-sm rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 pr-12 sm:pr-14 border border-slate-700/80 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition shadow-inner">
-                    <span id="char-count"
-                        class="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 text-[9px] sm:text-[10px] text-slate-500 pointer-events-none">0/500</span>
-                    <span id="feedback-badge"
-                        class="hidden absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 text-[9px] sm:text-[10px] bg-pink-500/20 text-pink-300 border border-pink-500/40 px-2 py-1 rounded-md font-medium flex items-center gap-1">
-                        <i class="fa-solid fa-pen-to-square"></i> <span class="hidden sm:inline">ໂໝດສົ່ງຄຳຄິດເຫັນ</span>
-                    </span>
-                </div>
-                <button type="submit" id="send-btn"
-                    class="bg-gradient-to-r from-cyan-500 via-indigo-600 to-pink-500 hover:from-cyan-400 hover:to-pink-400 text-white p-2.5 sm:p-3 rounded-xl transition-all shadow-lg shadow-cyan-500/25 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 shrink-0 active:scale-95 group">
-                    <i class="fa-solid fa-paper-plane group-hover:translate-x-0.5 transition-transform text-sm"></i>
-                </button>
-            </form>
-        </div>
+            <div class="relative flex-1">
+                <input type="text" id="user-input" placeholder="ພິມຄຳຖາມ ຫຼື ຂໍ້ຄວາມ..." autocomplete="off"
+                    maxlength="500" enterkeyhint="send"
+                    class="w-full bg-slate-950/90 text-slate-100 placeholder-slate-500 text-xs sm:text-sm rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 pr-12 sm:pr-14 border border-slate-700/80 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition shadow-inner">
+                <span id="char-count"
+                    class="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 text-[9px] sm:text-[10px] text-slate-500 pointer-events-none">0/500</span>
+                <span id="feedback-badge"
+                    class="hidden absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 text-[9px] sm:text-[10px] bg-pink-500/20 text-pink-300 border border-pink-500/40 px-2 py-1 rounded-md font-medium flex items-center gap-1">
+                    <i class="fa-solid fa-pen-to-square"></i> <span class="hidden sm:inline">ໂໝດສົ່ງຄຳຄິດເຫັນ</span>
+                </span>
+            </div>
+            <button type="submit" id="send-btn"
+                class="bg-gradient-to-r from-cyan-500 via-indigo-600 to-pink-500 hover:from-cyan-400 hover:to-pink-400 text-white p-2.5 sm:p-3 rounded-xl transition-all shadow-lg shadow-cyan-500/25 flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 shrink-0 active:scale-95 group">
+                <i class="fa-solid fa-paper-plane group-hover:translate-x-0.5 transition-transform text-sm"></i>
+            </button>
+        </form>
+    </div>
     </div>
 
     <!-- Bottom Sheet (FAQ) -->
